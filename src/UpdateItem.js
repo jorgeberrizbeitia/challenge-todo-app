@@ -14,7 +14,7 @@ export class UpdateItem extends Component {
     console.log(_id)
 
     axios
-      .put(`http://localhost:4000/api/v1/todos${_id}`, { title, body })
+      .put(`http://localhost:4000/api/v1/todos/${_id}`, { title, body })
       .then(() => {
         this.props.getToDoListProp(); // to show newly added items
         this.props.toggleEditProp() // to toggle edit form back to off
